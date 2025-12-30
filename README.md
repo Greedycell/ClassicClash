@@ -15,7 +15,7 @@
 
 ## Installation
 [Clash of Clans iOS Clients](https://archive.org/download/com.supercell.magic-ios4.3-clutch-2.0.4-3/Clash%20of%20Clans/) (Only 1.70, 1.91, 5.2.X, 6.X.X, 6.256 has been tested)     
-[Clash of Clans Android Clients](https://mega.nz/folder/RqtDUILQ#Y5j1llBsGRAS6mG5xNUoWg) (Only 5.2.X, 6.X.X, 6.256 has been tested)
+[Clash of Clans Android Clients](https://clash-of-clans.uptodown.com/android/versions) (Only 5.2.X, 6.X.X, 6.256 has been tested)
 
 ###### Main Server:
 ```
