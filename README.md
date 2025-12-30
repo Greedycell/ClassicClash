@@ -1,6 +1,6 @@
 # <p align="center">ClassicClash</p>
 # <p align="center">A Python Clash of Clans server supporting multiple older versions</p>
-[![clash of clans](https://img.shields.io/badge/Clash%20of%20Clans-brightred.svg?style=flat")](https://github.com/Greedycell/ClassicClash/releases/tag/Clients)
+[![clash of clans](https://img.shields.io/badge/Clash%20of%20Clans-brightred.svg?style=flat")](#)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Warning: This server is not ready to run in a production environment.
