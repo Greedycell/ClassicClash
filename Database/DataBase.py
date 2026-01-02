@@ -7,7 +7,7 @@ from Utils.Helpers import Helpers
 class DataBase:
 
     def loadAccount(self):
-        db = TinyDB('database/Player/data.db')
+        db = TinyDB('Database/Player/data.db')
         query = Query()
         user_data = db.search(query.token == str(self.player.Token))
         if user_data:
@@ -31,7 +31,7 @@ class DataBase:
 
     def createAccount(self):
 
-        db = TinyDB('database/Player/data.db')
+        db = TinyDB('Database/Player/data.db')
 
         data = {
             "info":
@@ -61,7 +61,7 @@ class DataBase:
         db.insert(data)
 
     def replaceValue(self, value_name, new_value):
-        db = TinyDB('database/Player/data.db')
+        db = TinyDB('Database/Player/data.db')
         query = Query()
         print(self.player.Token)
         data = db.search(query.token == str(self.player.Token))
@@ -70,8 +70,8 @@ class DataBase:
         db.update(user_data, query.token == str(self.player.Token))
 
     def createAlliance(self, allianceid):
-        alliancedb = TinyDB('database/Alliance/alliance.db')
-        chatdb = TinyDB('database/Alliance/chat.db')
+        alliancedb = TinyDB('Database/Alliance/alliance.db')
+        chatdb = TinyDB('Database/Alliance/chat.db')
 
         data = {
             "allianceID": allianceid,
@@ -106,7 +106,7 @@ class DataBase:
             }
 
     def CountAlliance(self, minMembers, maxMembers, allianceType, maxListLength):
-        db = TinyDB('database/Alliance/alliance.db')
+        db = TinyDB('Database/Alliance/alliance.db')
         query = Query()
         alliance_list = []
 
@@ -117,7 +117,7 @@ class DataBase:
             # if info["members"]["totalmembers"] >= minMembers and info["members"]["totalmembers"] < maxMembers and info["type"] <= allianceType and self.AllianceCount <= maxListLength:
 
     def loadAlliance(self, allianceid):
-        db = TinyDB('database/Alliance/alliance.db')
+        db = TinyDB('Database/Alliance/alliance.db')
         query = Query()
         data = db.search(query.allianceID == self.player.AllianceID)
         alliance_data = data[0]
@@ -135,7 +135,7 @@ class DataBase:
                 self.plrids.append(int(plridentifier))
 
     def GetMemberData(self, allianceID):
-        db = TinyDB('database/Player/data.db')
+        db = TinyDB('Database/Player/data.db')
         query = Query()
         member_list = []
 
@@ -147,7 +147,7 @@ class DataBase:
         return member_list
 
     def replaceAllianceValue(self, target, inf1, inf2, inf3, inf4):
-        db = TinyDB('database/Alliance/alliance.db')
+        db = TinyDB('Database/Alliance/alliance.db')
         query = Query()
         data = db.search(query.allianceID == target)
         print(data, target)
@@ -157,5 +157,6 @@ class DataBase:
         alliance_data["info"]["badgeID"] = inf2
         alliance_data["info"]["type"] = inf3
         alliance_data["info"]["trophiesneeded"] = inf4
+
 
         db.update(alliance_data, query.allianceID == target)
